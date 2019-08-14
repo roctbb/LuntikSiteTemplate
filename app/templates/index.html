@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Поле чудес ОНЛАЙН!</h1>
+<p>Призы бесплатно, без СМС и регистрации за 5 МИНУТ!!!</p>
+
+<strong>Вы выиграли {{ prize }}!</strong>
+
+<p>Чтобы забрать приз, заполните форму ниже...</p>
+
+<form action="/" method="POST">
+    {% csrf_token %}
+    <strong>Email: </strong>
+    <input type="email" name="email">
+    <input type="submit" value="Получить приз!" />
+</form>
+</body>
+</html>
